@@ -85,9 +85,9 @@ while True:
 |  John | Maple Drive  | Stafford    |
 
 ## Pie charts
-doesn't work without extra spice
+doesn't work without plugin
 ```mermaid
-pie title smartphoneUsers
+pie title Smartphone Users
          "iPhone" : 60
          "Samsung" : 30
          "Pixel" :10
