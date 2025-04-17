@@ -1,5 +1,6 @@
 # WORKING WITH A LIST
-shopping_list = ["eggs", "bread", "bananas", "biscuits", "milk"]
+shopping_list = ["eggs", "bread", "bananas",
+                 "biscuits", "milk"]
 print(shopping_list)
 print(type(shopping_list))
 print(shopping_list[0])
@@ -23,5 +24,6 @@ user_name = input("Your name: ")
 user_age = input("Your age: ")
 user_dob = input("Your date of birth (dd-mm-yyyy): ")
 height = input("Enter your height (cm): ")
-user_details_list = [user_name, int(user_age), user_dob, float(height)]
+user_details_list = [user_name, int(user_age),
+                     user_dob, float(height)]
 print(user_details_list)
