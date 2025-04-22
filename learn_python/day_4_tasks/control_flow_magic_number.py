@@ -44,8 +44,6 @@ def get_input():
 
     return num
 
-
-
 # Allow the user 5 guesses
 for c in range(5):
 
