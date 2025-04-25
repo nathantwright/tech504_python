@@ -9,13 +9,15 @@ with open("servers.json", "r") as file:
     print(type(servers), servers)
     print(servers["server1"])
     print(servers["server2"])
-    for key in servers.keys():
+    for key in servers:
         print(f"\nKey and Value: '{key}' = "
               f"'{servers[key]}'" )
-        for record_key in servers[key].keys():
+        for record_key in servers[key]:
             print(f"Record key and sub value: "
                   f"'{record_key}' = "
                   f"'{servers[key][record_key]}'")
+
+#quit()
 
 with open("servers.json", "r") as file:
     # Reads the JSON file to a dictionary

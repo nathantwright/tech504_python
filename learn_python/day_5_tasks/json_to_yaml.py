@@ -3,6 +3,23 @@ import os
 import sys
 import yaml
 
+"""
+Come back to this function once you've read rest
+of code
+"""
+# 2.2 Check the target file doesn't already exist
+# WRITE YOUR CODE HERE
+def part_2_2():
+    if os.path.exists(sys.argv[2]):
+        print(f"File with name '{sys.argv[2]}' "
+              f"already exists!")
+    else:
+        # 2.3 If previous conditions not met, then save
+        # YAML file
+        # WRITE YOUR CODE HERE
+        with open(sys.argv[2], "w") as yaml_file:
+            yaml_file.write(yaml_str)
+
 source_content = {}
 # Checking there is a file name passed
 if len(sys.argv) > 1:
@@ -19,27 +36,14 @@ if len(sys.argv) > 1:
 # No source file specified
 else:
     print("ERROR: No JSON file was specified")
-    print("Usage: json_to_yaml.py <source_file.json>"
-          " <target_file.yaml>")
+    print("Usage: json_to_yaml.py "
+          "<source_file.json> <target_file.yaml>")
 
 # 1. Convert the JSON to YAML - use yaml library
 yaml_str = yaml.dump(source_content)
 
 # 2. Save the YAML into a new file with the name
 # for it received as an argument
-
-# 2.2 Check the target file doesn't already exist
-# WRITE YOUR CODE HERE
-def part_2_2():
-    if os.path.exists(sys.argv[2]):
-        print(f"File with name '{sys.argv[2]}' "
-              f"already exists!")
-    else:
-        # 2.3 If previous conditions not met, then save
-        # YAML file
-        # WRITE YOUR CODE HERE
-        with open(sys.argv[2], "w") as yaml_file:
-            yaml_file.write(yaml_str)
 
 # 2.1 Check the target file name was specified as
 # an argument, if not, output the YAML to the

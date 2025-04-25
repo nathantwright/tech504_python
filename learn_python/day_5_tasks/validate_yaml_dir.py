@@ -7,9 +7,11 @@ if len(sys.argv) > 1:
     if os.path.exists(sys.argv[1]):
         dir_contents = os.listdir(sys.argv[1])
         for f in dir_contents:
-            if os.path.isfile(sys.argv[1] + "/" + f):
+            if os.path.isfile(sys.argv[1] + "/" +
+                              f):
                 try:
-                    file = open(sys.argv[1] + "/" + f, "r")
+                    file = open(sys.argv[1] + "/"
+                                + f, "r")
                     yaml.safe_load(file)
                     file.close()
                     print(f"'{f}' is valid")
